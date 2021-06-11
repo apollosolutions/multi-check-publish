@@ -1,0 +1,14 @@
+subgraphs:
+  astronauts:
+    routing_url: http://localhost:4000/graphql
+    schema:
+      file: astronauts.graphql
+  missions:
+    routing_url: http://localhost:4001/graphql
+    schema:
+      subgraph_url: http://localhost:4001/graphql
+  vehicles:
+    routing_url: http://localhost:4002/graphql
+    schema:
+      graphref: lenny-roverx-test
+      subgraph: vehicles
