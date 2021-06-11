@@ -48,7 +48,10 @@ export async function roverSubgraphFetch(graphRef, subgraph) {
  *  schema: string | '-';
  *  stdin: string | undefined;
  *  profile?: string;
- *  log?: string
+ *  log?: string;
+ *  queryCountThreshold?: string;
+ *  queryPercentageThreshold?: string;
+ *  validationPeriod?: string;
  * }} params
  */
 export async function roverSubgraphCheck({
@@ -58,6 +61,9 @@ export async function roverSubgraphCheck({
   stdin,
   profile,
   log,
+  queryCountThreshold,
+  queryPercentageThreshold,
+  validationPeriod,
 }) {
   const proc = execa(
     "node",
@@ -72,6 +78,13 @@ export async function roverSubgraphCheck({
       schema,
       ...(profile ? ["--profile", profile] : []),
       ...(log ? ["--log", log] : []),
+      ...(queryCountThreshold
+        ? ["--query-count-threshold", queryCountThreshold]
+        : []),
+      ...(queryPercentageThreshold
+        ? ["--query-percentage-threshold", queryPercentageThreshold]
+        : []),
+      ...(validationPeriod ? ["--validation-period", validationPeriod] : []),
     ],
     {
       input: stdin,

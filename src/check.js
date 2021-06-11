@@ -2,9 +2,25 @@ import { loadConfig, getSchema } from "./config.js";
 import { roverSubgraphCheck } from "./rover.js";
 
 /**
- * @param {{ graphRef: string; config: string; profile?: string; log?: string, headers?: string[] }} params
+ * @param {{
+ *  graphRef: string;
+ *  config: string;
+ *  profile?: string;
+ *  log?: string;
+ *  headers?: string[];
+ *  queryCountThreshold?: string;
+ *  queryPercentageThreshold?: string;
+ *  validationPeriod?: string;
+ * }} params
  */
-export async function check({ graphRef, config, profile, log, headers }) {
+export async function check({
+  graphRef,
+  config,
+  profile,
+  log,
+  headers,
+  ...rest
+}) {
   const { subgraphs, dirname } = await loadConfig(config);
 
   for await (const [name, subgraph] of Object.entries(subgraphs)) {
@@ -16,6 +32,7 @@ export async function check({ graphRef, config, profile, log, headers }) {
       profile,
       log,
       ...schema,
+      ...rest,
     });
 
     if (exitCode !== 0) {

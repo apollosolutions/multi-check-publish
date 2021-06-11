@@ -11,8 +11,14 @@ Currently provides:
 
 ## Usage
 
-Until this is published, you can use it from GitHub:
+Until this is published to a registry, you can use it from GitHub:
 
 ```sh
-npx -y github:apollosolutions/roverx --help
+npx github:apollosolutions/roverx --help
 ```
+
+## Notes
+
+- You probably want to run `rover supergraph compose` before running either
+  `roverx supergraph publish`. Publishing subgraphs with composition errors
+  will not update your gateway when using managed federation.
