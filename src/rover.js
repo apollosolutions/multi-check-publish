@@ -1,11 +1,14 @@
 import execa from "execa";
-import { dirname, resolve } from "path";
-import { fileURLToPath } from "url";
+import { createRequire } from "module";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const require = createRequire(import.meta.url);
 
 function roverBin() {
-  return resolve(__dirname, "../node_modules/.bin/rover");
+  const rover = require.resolve("@apollo/rover/run.js");
+  if (!rover) {
+    throw new Error("cannot find @apollo/rover NPM package");
+  }
+  return rover;
 }
 
 /**
