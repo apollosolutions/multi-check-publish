@@ -19,13 +19,16 @@ const cli = meow(
                                     debug, trace]
         --profile <profile-name>    Name of configuration profile to use [default: default]
     -H, --header <key:value>...     Headers to pass to the endpoint if using subgraph_url in your
-                                    config. Values must be key:value pairs. If a value has a space 
+                                    config. Values must be key:value pairs. If a value has a space
                                     in it, use quotes around the pair, ex. -H "Auth:some key"
 
   CHECK FLAGS
         --query-count-threshold <query-count-threshold>
         --query-percentage-threshold <query-percentage-threshold>
         --validation-period <validation-period>
+
+  PUBLISH FLAGS
+        --convert
 `,
   {
     importMeta: import.meta,
@@ -54,6 +57,9 @@ const cli = meow(
       },
       validationPeriod: {
         type: "string",
+      },
+      convert: {
+        type: "boolean",
       },
     },
   }

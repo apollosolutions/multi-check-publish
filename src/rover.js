@@ -110,7 +110,8 @@ export async function roverSubgraphCheck({
  *  schema: string | '-';
  *  stdin: string | undefined;
  *  profile?: string;
- *  log?: string
+ *  log?: string;
+ *  convert?: boolean;
  * }} params
  */
 export async function roverSubgraphPublish({
@@ -121,6 +122,7 @@ export async function roverSubgraphPublish({
   stdin,
   profile,
   log,
+  convert,
 }) {
   const proc = execa(
     "node",
@@ -137,6 +139,7 @@ export async function roverSubgraphPublish({
       schema,
       ...(profile ? ["--profile", profile] : []),
       ...(log ? ["--log", log] : []),
+      ...(convert ? ["--convert"] : []),
     ],
     {
       input: stdin,
