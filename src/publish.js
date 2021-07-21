@@ -2,9 +2,16 @@ import { getSchema, loadConfig } from "./config.js";
 import { roverSubgraphPublish } from "./rover.js";
 
 /**
- * @param {{ graphRef: string; config: string; profile?: string; log?: string; headers?: string[] }} params
+ * @param {{ graphRef: string; config: string; profile?: string; log?: string; headers?: string[], convert?: boolean }} params
  */
-export async function publish({ graphRef, config, profile, log, headers }) {
+export async function publish({
+  graphRef,
+  config,
+  profile,
+  log,
+  headers,
+  convert,
+}) {
   const { subgraphs, dirname } = await loadConfig(config);
 
   for await (const [name, subgraph] of Object.entries(subgraphs)) {
@@ -16,6 +23,7 @@ export async function publish({ graphRef, config, profile, log, headers }) {
       profile,
       log,
       routingUrl: subgraph.routing_url,
+      convert,
       ...schema,
     });
 
