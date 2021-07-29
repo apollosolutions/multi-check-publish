@@ -10,5 +10,5 @@ subgraphs:
   vehicles:
     routing_url: http://localhost:4002/graphql
     schema:
-      graphref: lenny-multi-check-publish-test
+      graphref: lenny-roverx-test
       subgraph: vehicles
