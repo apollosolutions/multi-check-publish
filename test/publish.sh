@@ -14,7 +14,7 @@ function cleanup()
 trap cleanup EXIT
 trap cleanup ERR
 
-node index.js supergraph publish lenny-multi-check-publish-test@current --config test/config.yaml --log info
+node index.js supergraph publish lenny-roverx-test@current --config test/config.yaml --log info
 success=$?
 
 kill $server_pid

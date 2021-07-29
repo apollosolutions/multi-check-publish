@@ -14,7 +14,7 @@ function cleanup()
 trap cleanup EXIT
 trap cleanup ERR
 
-node index.js supergraph check lenny-multi-check-publish-test@current --config test/config.yaml --log info --query-count-threshold 1 --query-percentage-threshold 99 --validation-period 24h
+node index.js supergraph check lenny-roverx-test@current --config test/config.yaml --log info --query-count-threshold 1 --query-percentage-threshold 99 --validation-period 24h
 success=$?
 
 kill $server_pid
