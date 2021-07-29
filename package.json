@@ -1,5 +1,5 @@
 {
-  "name": "@apollosolutions/roverx",
+  "name": "@apollosolutions/multi-check-publish",
   "version": "0.1.1",
   "main": "index.js",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "@apollo/rover": "^0.1.8",
     "execa": "^5.1.1",
     "js-yaml": "^4.1.0",
-    "meow": "^10.0.1"
+    "meow": "^10.1.1"
   },
   "devDependencies": {
     "@apollo/federation": "^0.26.0",
