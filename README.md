@@ -1,24 +1,24 @@
-# roverx ⚠️ Experimental ⚠️
+# multi-check-publish ⚠️ Experimental ⚠️
 
 Experimental wrapper around Apollo Rover.
 
 Currently provides:
 
 - Performing schema checks for all subgraphs of a federated graph
-  with `roverx supergraph check --config config.yaml`.
+  with `multi-check-publish supergraph check --config config.yaml`.
 - Publishing all subgraph schemas in a federated graph with
-  `roverx supergraph publish --config config.yaml`.
+  `multi-check-publish supergraph publish --config config.yaml`.
 
 ## Usage
 
 Until this is published to a registry, you can use it from GitHub:
 
 ```sh
-npx github:apollosolutions/roverx --help
+npx github:apollosolutions/multi-check-publish --help
 ```
 
 ## Notes
 
 - You probably want to run `rover supergraph compose` before running either
-  `roverx supergraph publish`. Publishing subgraphs with composition errors
+  `multi-check-publish supergraph publish`. Publishing subgraphs with composition errors
   will not update your gateway when using managed federation.

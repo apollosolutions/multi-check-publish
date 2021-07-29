@@ -9,8 +9,8 @@ const cli = meow(
   Experimental wrapper around Apollo Rover.
 
   USAGE
-      $ @apollosolutions/roverx supergraph check mygraph@current --config config.yaml
-      $ @apollosolutions/roverx supergraph publish mygraph@current --config config.yaml
+      $ @apollosolutions/multi-check-publish supergraph check mygraph@current --config config.yaml
+      $ @apollosolutions/multi-check-publish supergraph publish mygraph@current --config config.yaml
 
   FLAGS
         --config <config-path>      The relative path to the supergraph configuration file. See
