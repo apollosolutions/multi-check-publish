@@ -29,14 +29,14 @@
     "@types/node" "^10.1.0"
     long "^4.0.0"
 
-"@apollo/rover@^0.1.8":
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/@apollo/rover/-/rover-0.1.10.tgz#b8989d421b5b8893492d660e2b04b1c60c6eabdb"
-  integrity sha512-lNK9iuOwYo4+ImumSlLM1GGyexhYoQlGvP/tpEiMTrumzbILCsNuIwAajzAbhO0Xm5mumwFI4owcqkgbZfYZpw==
+"@apollo/rover@^0.4.5":
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/@apollo/rover/-/rover-0.4.5.tgz#cabfdbfb70aa1fdaa68cba4daeec513b5e470aad"
+  integrity sha512-lO/WK12pLbKki98mGrgWg5L/r+XV0M/OubGOUCd8umbCmeMtQ+RI1+HFXn3/3nm8D/Kk5G7YxUjub5acyW6dBQ==
   dependencies:
     binary-install "^0.1.1"
     console.table "^0.10.0"
-    detect-libc "^1.0.3"
+    detect-libc "^2.0.0"
 
 "@apollographql/apollo-tools@^0.5.0":
   version "0.5.2"
@@ -806,10 +806,10 @@ destroy@~1.0.4:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
-detect-libc@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
-  integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
+detect-libc@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-2.0.1.tgz#e1897aa88fa6ad197862937fbc0441ef352ee0cd"
+  integrity sha512-463v3ZeIrcWtdgIg6vI6XUncguvr2TnGl4SzDXinkt9mSLpBJKXT3mW6xT3VQdDN11+WVs29pgvivTc4Lp8v+w==
 
 dicer@0.3.0:
   version "0.3.0"
