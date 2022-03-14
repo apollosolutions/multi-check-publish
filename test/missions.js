@@ -1,5 +1,5 @@
 import { ApolloServer, gql } from "apollo-server";
-import { buildFederatedSchema } from "@apollo/federation";
+import { buildSubgraphSchema } from "@apollo/subgraph";
 
 const typeDefs = gql`
   type Mission {
@@ -27,7 +27,7 @@ const typeDefs = gql`
 `;
 
 const server = new ApolloServer({
-  schema: buildFederatedSchema({ typeDefs }),
+  schema: buildSubgraphSchema({ typeDefs }),
 });
 
 server.listen(4001);

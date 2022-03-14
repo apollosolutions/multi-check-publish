@@ -1,4 +1,4 @@
-import execa from "execa";
+import { execa } from "execa";
 import { createRequire } from "module";
 
 const require = createRequire(import.meta.url);
