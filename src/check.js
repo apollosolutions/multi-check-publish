@@ -1,6 +1,37 @@
 import { loadConfig, getSchema } from "./config.js";
 import { roverSubgraphCheck } from "./rover.js";
 
+import { Command, Option } from "clipanion";
+
+export class CheckCommand extends Command {
+  static paths = [["supergraph", "check"]];
+
+  static usage = Command.Usage({
+    category: `Subgraph Checks`,
+    description: `Run a schema check for each subgraph in the supergraph config.`,
+  });
+
+  graphRef = Option.String({ required: true });
+
+  config = Option.String("--config", { required: true });
+
+  profile = Option.String("--profile");
+
+  log = Option.String("--log,-l");
+
+  headers = Option.Array("--header,-H");
+
+  queryCountThreshold = Option.String("--query-count-threshold");
+
+  queryPercentageThreshold = Option.String("--query-percentage-threshold");
+
+  validationPeriod = Option.String("--validation-period");
+
+  async execute() {
+    await check({ ...this });
+  }
+}
+
 /**
  * @param {{
  *  graphRef: string;

@@ -35,3 +35,18 @@ jobs:
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
       - run: bash test/publish.sh
+
+  init-test:
+    runs-on: ubuntu-18.04
+
+    env:
+      APOLLO_KEY: ${{ secrets.APOLLO_KEY }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.16.1
+      - run: npm install -g yarn
+      - run: yarn install --frozen-lockfile
+      - run: bash test/init.sh
