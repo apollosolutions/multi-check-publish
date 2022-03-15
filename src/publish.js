@@ -24,13 +24,7 @@ export class PublishCommand extends Command {
   convert = Option.Boolean("--convert");
 
   async execute() {
-    let config = this.config;
-    if (config === "-") {
-      config = tempy.file();
-      await writeFile(config, await getStdin(), "utf-8");
-    }
-    await publish({ ...this, config });
-    await unlink(config);
+    await publish({ ...this });
   }
 }
 

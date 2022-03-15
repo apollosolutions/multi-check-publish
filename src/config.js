@@ -2,12 +2,23 @@ import { resolve, dirname } from "path";
 import { stat, readFile } from "fs/promises";
 import { load } from "js-yaml";
 import { roverSubgraphFetch, roverSubgraphIntrospect } from "./rover.js";
+import getStdin from "get-stdin";
 
 /**
  * @param {string} path
  * @returns {Promise<import("./typings").Config & { dirname: string }>}
  */
 export async function loadConfig(path, cwd = process.cwd()) {
+  if (path === "-") {
+    const yaml = load(await getStdin());
+    if (!isValidConfig(yaml)) {
+      console.error(`Config from stdin is invalid`);
+      process.exit(1);
+    }
+
+    return { ...yaml, dirname: process.cwd() };
+  }
+
   const fullPath = resolve(cwd, path);
   const file = await stat(fullPath);
 
