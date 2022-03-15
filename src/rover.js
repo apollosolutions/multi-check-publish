@@ -12,6 +12,28 @@ function roverBin() {
 }
 
 /**
+ * @param {{
+ *  graphRef: string;
+ *  profile?: string;
+ *  log?: string;
+ * }} params
+ */
+export async function roverSubgraphList({ graphRef, profile, log }) {
+  const proc = execa("node", [
+    roverBin(),
+    "subgraph",
+    "list",
+    graphRef,
+    "--output",
+    "json",
+    ...(profile ? ["--profile", profile] : []),
+    ...(log ? ["--log", log] : []),
+  ]);
+
+  return JSON.parse((await proc).stdout);
+}
+
+/**
  * @param {string} url
  * @param {string[] | undefined} [headers]
  */

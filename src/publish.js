@@ -1,5 +1,38 @@
 import { getSchema, loadConfig } from "./config.js";
 import { roverSubgraphPublish } from "./rover.js";
+import { Command, Option } from "clipanion";
+import { unlink, writeFile } from "fs/promises";
+import tempy from "tempy";
+import getStdin from "get-stdin";
+
+export class PublishCommand extends Command {
+  static paths = [["supergraph", "publish"]];
+
+  static usage = Command.Usage({
+    category: `Subgraph Publishes`,
+    description: `Run a subgraph publish for each subgraph in the supergraph config.`,
+  });
+
+  graphRef = Option.String({ required: true });
+
+  config = Option.String("--config", { required: true });
+
+  profile = Option.String("--profile");
+
+  log = Option.String("--log,-l");
+
+  convert = Option.Boolean("--convert");
+
+  async execute() {
+    let config = this.config;
+    if (config === "-") {
+      config = tempy.file();
+      await writeFile(config, await getStdin(), "utf-8");
+    }
+    await publish({ ...this, config });
+    await unlink(config);
+  }
+}
 
 /**
  * @param {{ graphRef: string; config: string; profile?: string; log?: string; headers?: string[], convert?: boolean }} params

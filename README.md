@@ -14,7 +14,16 @@ Currently provides:
 Until this is published to a registry, you can use it from GitHub:
 
 ```sh
-npx github:apollosolutions/multi-check-publish --help
+npx github:@apollosolutions/multi-check-publish --help
+```
+
+## Recipes
+
+### Duplicating a variant
+
+```sh
+npx github:@apollosolutions/multi-check-publish supergraph init mygraph@current | \
+  npx github:@apollosolutions/multi-check-publish supergraph publish mygraph@new-variant --config -
 ```
 
 ## Notes
@@ -22,3 +31,7 @@ npx github:apollosolutions/multi-check-publish --help
 - You probably want to run `rover supergraph compose` before running either
   `multi-check-publish supergraph publish`. Publishing subgraphs with composition errors
   will not update your gateway when using managed federation.
+
+```
+
+```
