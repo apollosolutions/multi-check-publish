@@ -21,10 +21,10 @@
     "@types/node" "^10.1.0"
     long "^4.0.0"
 
-"@apollo/rover@^0.4.4":
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/@apollo/rover/-/rover-0.4.4.tgz#dcac0604a96b9dea6e0d16ba40b73d6f5939eef6"
-  integrity sha512-NhipSmtrDkrpbUig3/iDKE7CX0nSHZfs6j7PXnY6lJgRVf5SVTs6tEbVrxWKwRD9Ucb3hjWXCSQ6uimmsUsZSw==
+"@apollo/rover@^0.4.7":
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/@apollo/rover/-/rover-0.4.7.tgz#40b1f2a91e52e3728f566ab9cc550835cf406b5a"
+  integrity sha512-WJaknzX8Cnkx7/NtxeikYEpZs3qEFuol1zzkqK1YUWyfuAAmE2Kfjnt168HnWRy6AF4xoQjLMABo1QRZ/rx3GA==
   dependencies:
     binary-install "^0.1.1"
     console.table "^0.10.0"
