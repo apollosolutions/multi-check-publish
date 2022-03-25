@@ -30,10 +30,10 @@
     console.table "^0.10.0"
     detect-libc "^2.0.0"
 
-"@apollo/subgraph@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@apollo/subgraph/-/subgraph-0.3.3.tgz#0f9b2fa560d59c6b3c1994bfe84ceb81ccbd9720"
-  integrity sha512-VH8B0IEa960ajMApWPs0eu/kH28tDUbuXgGJN2ZUo9hIo6LtyPfDRATtHlMr2SeW1Vh3ukiZE3BW78zrtTHCUA==
+"@apollo/subgraph@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@apollo/subgraph/-/subgraph-0.4.0.tgz#4c6fc2bcc03b1715e7bcb7071f79512f3c5cee1e"
+  integrity sha512-Fg9XGaXpFP+X2J5HswIin/0ksmZShdukBtmtbMgvxJs7wfStlr+7m8gice4YSXYm/nu4td+UxUAfaqUjLYiFbQ==
 
 "@apollographql/apollo-tools@^0.5.1":
   version "0.5.2"
