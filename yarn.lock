@@ -21,11 +21,12 @@
     "@types/node" "^10.1.0"
     long "^4.0.0"
 
-"@apollo/rover@^0.4.4":
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/@apollo/rover/-/rover-0.4.4.tgz#dcac0604a96b9dea6e0d16ba40b73d6f5939eef6"
-  integrity sha512-NhipSmtrDkrpbUig3/iDKE7CX0nSHZfs6j7PXnY6lJgRVf5SVTs6tEbVrxWKwRD9Ucb3hjWXCSQ6uimmsUsZSw==
+"@apollo/rover@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@apollo/rover/-/rover-0.5.1.tgz#7e2f97440b835b8066fbe9ce55de2c3268878894"
+  integrity sha512-+cbqlvOP4r9y0b5xJN4K+UCNJrp4in2eUI34Ic9xQ+nrMwQeOF7+sWVrXARjk/+DajHQ2HXqey+XVemt87F5tw==
   dependencies:
+    axios-proxy-builder "^0.1.1"
     binary-install "^0.1.1"
     console.table "^0.10.0"
     detect-libc "^2.0.0"
@@ -418,6 +419,11 @@ async-retry@^1.2.1:
   integrity sha512-wfr/jstw9xNi/0teMHrRW7dsz3Lt5ARhYNZ2ewpadnhaIp5mbALhOAP+EAdsC7t4Z6wqsDVv9+W6gm1Dk9mEyw==
   dependencies:
     retry "0.13.1"
+
+axios-proxy-builder@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/axios-proxy-builder/-/axios-proxy-builder-0.1.1.tgz#d61e4cdfd37ec3de28c0788aa57fd80c1ae3b217"
+  integrity sha512-WzrnBYjFeMpGz3XReCXenl2uSiVYmDnH1Aq+jRT2toWFMacqn0itOu2ZHNhsIX2tpGe+AMx5DQ5iIgEcZRT/sA==
 
 axios@^0.21.1:
   version "0.21.4"
