@@ -1,9 +1,6 @@
 import { getSchema, loadConfig } from "./config.js";
 import { roverSubgraphPublish } from "./rover.js";
 import { Command, Option } from "clipanion";
-import { unlink, writeFile } from "fs/promises";
-import tempy from "tempy";
-import getStdin from "get-stdin";
 
 export class PublishCommand extends Command {
   static paths = [["supergraph", "publish"]];
