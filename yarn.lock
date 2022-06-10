@@ -37,10 +37,10 @@
     "@types/node" "^10.1.0"
     long "^4.0.0"
 
-"@apollo/rover@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@apollo/rover/-/rover-0.6.0.tgz#af5f1c2ebe4d0869566df239c1ee286600dec837"
-  integrity sha512-lHXHOPLl8JuiywgIGLr9D8ZxghzPFsjm8QriLG9RMimL0icdjVveQ84WSbgIEdO/xvRpu4O83w6LYUhCVKNXMw==
+"@apollo/rover@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@apollo/rover/-/rover-0.7.0.tgz#469859ff8efaca36b7d57fca7cf0544c90e14678"
+  integrity sha512-OTTZ5/HDoT490UpkPXcEzSYLkC/XiJGjSJysAoiXy8/EVvPPe7qlQ8arE3/qeRwWe83yz4YT22kHjHMpo6Pi2g==
   dependencies:
     axios-proxy-builder "^0.1.1"
     binary-install "^1.0.1"
