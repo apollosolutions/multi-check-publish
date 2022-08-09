@@ -27,6 +27,8 @@ export class CheckCommand extends Command {
 
   validationPeriod = Option.String("--validation-period");
 
+  timeout = Option.String("--client-timeout");
+
   async execute() {
     await check({ ...this });
   }

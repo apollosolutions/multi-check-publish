@@ -20,6 +20,8 @@ export class PublishCommand extends Command {
 
   convert = Option.Boolean("--convert");
 
+  timeout = Option.String("--client-timeout");
+
   async execute() {
     await publish({ ...this });
   }
@@ -35,6 +37,7 @@ export async function publish({
   log,
   headers,
   convert,
+  timeout,
 }) {
   const { subgraphs, dirname } = await loadConfig(config);
 
@@ -48,6 +51,7 @@ export async function publish({
       log,
       routingUrl: subgraph.routing_url,
       convert,
+      timeout,
       ...schema,
     });
 

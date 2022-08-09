@@ -23,6 +23,8 @@ export class InitCommand extends Command {
 
   log = Option.String("--log,-l");
 
+  timeout = Option.String("--client-timeout");
+
   async execute() {
     await init({ ...this });
   }
@@ -35,11 +37,12 @@ export class InitCommand extends Command {
  *  log?: string;
  * }} params
  */
-export async function init({ graphRef, profile, log }) {
+export async function init({ graphRef, profile, log, timeout }) {
   const subgraphs = await roverSubgraphList({
     graphRef,
     profile,
     log,
+    timeout,
   });
 
   if (subgraphs.data) {
