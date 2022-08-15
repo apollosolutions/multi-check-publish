@@ -18,7 +18,7 @@ function roverBin() {
  *  log?: string;
  * }} params
  */
-export async function roverSubgraphList({ graphRef, profile, log }) {
+export async function roverSubgraphList({ graphRef, profile, log, timeout }) {
   const proc = execa("node", [
     roverBin(),
     "subgraph",
@@ -28,6 +28,7 @@ export async function roverSubgraphList({ graphRef, profile, log }) {
     "json",
     ...(profile ? ["--profile", profile] : []),
     ...(log ? ["--log", log] : []),
+    ...(timeout ? ["--client-timeout", timeout] : []),
   ]);
 
   return JSON.parse((await proc).stdout);
@@ -89,6 +90,7 @@ export async function roverSubgraphCheck({
   queryCountThreshold,
   queryPercentageThreshold,
   validationPeriod,
+  timeout,
 }) {
   const proc = execa(
     "node",
@@ -110,6 +112,7 @@ export async function roverSubgraphCheck({
         ? ["--query-percentage-threshold", queryPercentageThreshold]
         : []),
       ...(validationPeriod ? ["--validation-period", validationPeriod] : []),
+      ...(timeout ? ["--client-timeout", timeout] : []),
     ],
     {
       input: stdin,
@@ -145,6 +148,7 @@ export async function roverSubgraphPublish({
   profile,
   log,
   convert,
+  timeout,
 }) {
   const proc = execa(
     "node",
@@ -162,6 +166,7 @@ export async function roverSubgraphPublish({
       ...(profile ? ["--profile", profile] : []),
       ...(log ? ["--log", log] : []),
       ...(convert ? ["--convert"] : []),
+      ...(timeout ? ["--client-timeout", timeout] : []),
     ],
     {
       input: stdin,
