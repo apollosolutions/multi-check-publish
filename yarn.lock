@@ -37,13 +37,13 @@
     "@types/node" "^10.1.0"
     long "^4.0.0"
 
-"@apollo/rover@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@apollo/rover/-/rover-0.6.0.tgz#af5f1c2ebe4d0869566df239c1ee286600dec837"
-  integrity sha512-lHXHOPLl8JuiywgIGLr9D8ZxghzPFsjm8QriLG9RMimL0icdjVveQ84WSbgIEdO/xvRpu4O83w6LYUhCVKNXMw==
+"@apollo/rover@^0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@apollo/rover/-/rover-0.12.1.tgz#19f15188bc3167948c1b88cbef32daf7509fbbf2"
+  integrity sha512-p2itlpDkFMCm8eD1/ijhHXeixvSApK0QlZBMhbBCati68dgmXSCE7ZGQO/OSaIMvEPKnfJo0UvnHk9BLezr3xQ==
   dependencies:
     axios-proxy-builder "^0.1.1"
-    binary-install "^1.0.1"
+    binary-install "^1.0.6"
     console.table "^0.10.0"
     detect-libc "^2.0.0"
 
@@ -495,10 +495,10 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-binary-install@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/binary-install/-/binary-install-1.0.1.tgz#8f2c0ab5e515a45933114b4ca9100ef45adb6a56"
-  integrity sha512-5/rP8iHlYWwV7OKX1PaYasm2vi5iq4SLM+fT9UVjbbfiwR4cw+WANFTapOcVMznOMa3s6tYFiq84tbijopravg==
+binary-install@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/binary-install/-/binary-install-1.0.6.tgz#7d603003da4f890d13d3e887773e86776e0d24a3"
+  integrity sha512-h3K4jaC4jEauK3csXI9GxGBJldkpuJlHCIBv8i+XBNhPuxnlERnD1PWVczQYDqvhJfv0IHUbB3lhDrZUMHvSgw==
   dependencies:
     axios "^0.26.1"
     rimraf "^3.0.2"
